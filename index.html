@@ -1,0 +1,151 @@
+/* Dea Salsabila Putri Pasha 2IF (062030801825) */
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Hocus Pocus</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="header-logo">Hocus Pocus</div>
+      <div class="header-list">
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Recomendation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top-wrapper">
+      <div class="container">
+        <div class="top-text">
+          <h1>Girl Who <span>Read Books</span>.</h1>
+          <h3>Reading a good book is like taking a journey</h3>
+        </div>
+      </div>
+     
+  </div>
+
+    <div class="main">
+      <div class="books-wrapper">
+        <div class="container-book">
+          <div class="heading">
+            <h2>
+              <b>Books Recomendation</b>
+            </h2>
+          </div>
+          <div class="Books">
+            <div class="book">
+              <div class="book-cover">
+                <img src="https://ebooks.gramedia.com/ebook-covers/48459/image_highres/ID_MPK2019MTH07LHHP.jpg" class="img-circle" height="220" >
+              </div>
+              <p class="txt-contents">"Setiap detik sangat berarti karena setiap detik bisa berarti berkah, bisa juga bencana."</p>
+              <p>
+                <b>- Love, Hate & Hocus-Pocus by Karla M. Nashar -</b>
+              </p>
+            </div>
+            <div class="book">
+              <div class="book-cover">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1464844565l/30335218._SY475_.jpg" class="img-circle" height="220" >
+              </div>
+              <p class="txt-contents">"Sastra itu buat gue seperti membuka mata dan pikiran, sisi kehidupan lain yang mungkin nggak pernah kita jamah. Pemikiran orang yang kita nggak tahu. People's idea of a person they loved, they hated. Bikin kita lebih empati, lebih buka mata bahwa dunia kadang nggak selalu hitam dan putih."</p>
+              <p>
+                <b>- Secangkir Kopi dan Pencakar Langit by Aqessa A -</b>
+              </p>
+            </div>
+            <div class="book">
+              <div class="book-cover">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1441194791l/26211806._SY475_.jpg" class="img-circle" height="220" >
+              </div>
+              <p class="txt-contents">"Sejatinya, dalam hidup ini, kita tidak pernah berusaha mengalahkan orang lain, dan itu sama sekali tidak perlu. Kita cukup mengalahkan diri sendiri. Egoisme. Ketidakpedulian. Ambisi. Rasa takut. Pertanyaaan. Keraguan. Sekali kau bisa menang dalam pertempuran itu, maka pertempuran lainnya akan mudah saja."</p>
+              <p>
+                <b>- Pulang by Tere Liye -</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reading-wrapper">
+        <div class="container-list">
+          <div id="myDIV" class="reading-list">
+            <h2>My Reading List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          
+          <ul id="myUL" class="list-baca">
+            <li>Hidup Apa Adanya by Kim Suhyun</li>
+            <li>Sunshine Becomes You by Illana Tan</li>
+            <li>9 Summers 10 Auntumns by Iwan Setyawan</li>
+            <li>Resign by Almira Bastari</li>
+          </ul>
+        </div>
+
+        <script>
+          /* buat close button masing-masing baris */
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+/* bagian add button */ 
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+        </script>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-logo">Hocus Pocus</div>
+      <div class="footer-list">
+        <ul>
+          <li>Recomendation</li>
+          <li>About</li>
+          <li>Home</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

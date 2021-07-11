@@ -1,0 +1,278 @@
+li {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+  background-color: #FFF5EB;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-logo {
+  color: #945f2b;
+  font-family: 'Lucida Grande';
+  font-size: 36px;
+  float: left;
+  padding: 10px 40px;
+}
+
+.header-list li {
+  float: left;
+  padding: 10px 20px;
+  color: #945f2b;
+
+}
+
+.main {
+  width: 100%;
+  background-color: #F4C7AB;
+  height: 980px;
+}
+
+
+.top-wrapper {
+  width: 100%;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/73985275745693.5c550d6d82dd0.jpg);
+  background-size: cover;
+  height: 650px;
+  color: white;
+  padding: 100px 0 100px 0;
+  text-align: center;
+}
+
+/* tulisan diatas gambar */
+.top-wrapper h1 {
+  border-right-width: 0.15em;
+  border-right-style: solid;
+  border-right-color: #F4C7AB;
+  max-width: fit-content;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  padding: 0 15px 10px 5px;
+  font-size: 75px;
+  
+}
+
+.top-wrapper span {
+  opacity: 0.8;
+  color: #945f2b;
+}
+
+.top-wrapper h3 {
+  font-size: 23px;
+  opacity: 0,5;
+  padding: 5px 0;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.top-text {
+  position: relative;
+  top: 150px;
+}
+
+/* bagian rekomendasi buku */
+.books-wrapper {
+  height: 575px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.books-wrapper h2 {
+  font-size: 25px;
+  display: block;
+}
+
+.books-wrapper p {
+  font-size: 15px;
+}
+
+.container-book {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.heading {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #945f2b;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+
+.book {
+  float: left;
+  width: 33%;
+}
+
+.book-cover {
+  position: relative;
+}
+
+.book-cover img {
+  width: 200px;
+  border: 1px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.txt-contents {
+  width: 80%;
+  height: 90px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* bagian reading list */
+.reading-wrapper {
+  height: 500px;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.container-list {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Bagian list bacaan */
+.list-baca {
+  margin: 0;
+  padding: 0;
+}
+
+/* bagian desain list bacaan*/
+.list-baca li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.list-baca :nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* warna agak gelap pada bg hover */
+.list-baca li:hover {
+  background: #ddd;
+}
+
+
+/* desain close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #B2B8A3;
+  color: white;
+}
+
+/* bagian judul reading list */
+.reading-list {
+  background-color: #B2B8A3;
+  padding: 25px 35px;
+  color: #FFF5EB;
+  text-align: center;
+}
+
+
+.reading-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* bagian input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* bagian "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+/* bagian footer */
+.footer {
+  width: 100%;
+  background-color: #B2B8A3;
+  height: 100px;
+}
+
+.footer-logo {
+  color: #FFF5EB;
+  font-family: 'Lucida Grande';
+  float: left;
+  padding: 35px 20px;
+  font-size: 30px;
+}
+
+.footer-list {
+  float: right;
+}
+
+.footer-list li{
+  color: #FFF5EB;
+  padding: 30px 20px;
+  float: right;
+
+}
+  
+
